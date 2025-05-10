@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Şehrim</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+    }
+
+    .section-title {
+      margin-top: 60px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #0d6efd;
+    }
+
+    .city-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-4">
+    <h1 class="text-center mb-4">Suriye ve Türkiye'den Şehirler</h1>
+
+    <!-- Slider -->
+    <div id="slider" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="#damascus">
+            <img src="img/damascus.jpg" class="d-block w-100" alt="Damascus">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#tarsus">
+            <img src="img/tarsus.jpg" class="d-block w-100" alt="Tarsus">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#latakia">
+            <img src="img/latakia.jpg" class="d-block w-100" alt="Latakia">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#homs">
+            <img src="img/homs.jpg" class="d-block w-100" alt="Homs">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#aleppo">
+            <img src="img/aleppo.jpg" class="d-block w-100" alt="Aleppo">
+          </a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Damascus -->
+    <section id="damascus">
+      <h2 class="section-title">Şam (Damascus)</h2>
+      <p>Şam, dünyanın en eski başkentlerinden biridir. Ünlü Emevi Camii burada yer alır ve şehir tarih, kültür ve mimari açıdan zengindir.</p>
+      <img src="img/damascus.jpg" alt="Şam" class="city-image">
+    </section>
+
+    <!-- Tarsus -->
+    <section id="tarsus">
+      <h2 class="section-title">Tarsus</h2>
+      <p>Tarsus, Türkiye'nin Mersin ilinde tarihi bir şehirdir. Aziz Pavlus'un doğduğu yer olarak bilinir ve Roma kalıntıları ile tanınır.</p>
+      <img src="img/tarsus.jpg" alt="Tarsus" class="city-image">
+    </section>
+
+    <!-- Latakia -->
+    <section id="latakia">
+      <h2 class="section-title">Lazkiye (Latakia)</h2>
+      <p>Lazkiye, Suriye'nin önemli liman şehirlerinden biridir. Akdeniz kıyısında bulunur ve doğal güzellikleri ile bilinir.</p>
+      <img src="img/latakia.jpg" alt="Latakia" class="city-image">
+    </section>
+
+    <!-- Homs -->
+    <section id="homs">
+      <h2 class="section-title">Homs (Humus)</h2>
+      <p>Homs, Suriye'nin merkezi şehirlerinden biridir. Tarihi Halid bin Velid Camii ile tanınır. Ayrıca Orontes Nehri çevresinde doğal güzelliklere sahiptir.</p>
+      <img src="img/homs.jpg" alt="Homs" class="city-image">
+    </section>
+
+    <!-- Aleppo -->
+    <section id="aleppo">
+      <h2 class="section-title">Halep (Aleppo)</h2>
+      <p>Halep, Orta Doğu'nun en eski şehirlerinden biridir. Ünlü Halep Kalesi ve tarihi çarşısı ile dikkat çeker.</p>
+      <img src="img/aleppo.jpg" alt="Aleppo" class="city-image">
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
