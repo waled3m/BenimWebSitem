@@ -5,112 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>İletişim</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    body {
-      background-color: #f8f9fa;
-    }
-    .container {
-      max-width: 600px;
-      margin-top: 50px;
-    }
-    .error {
-      color: red;
-      font-size: 0.9rem;
-    }
-  </style>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
-    <a class="navbar-brand" href="index.html">Benim Web Sitem</a>
+    <a class="navbar-brand" href="#">Benim Web Sitem</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
-        <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-        <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
-        <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
-        <li class="nav-item"><a class="nav-link active" href="iletisim.html">İletişim</a></li>
-        <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Hakkımda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Şehrim</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Mirasımız</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">İlgi Alanlarım</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">İletişim</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Giriş</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<body>
-
-  <div class="container">
-    <h2 class="text-center mb-4">Bana Ulaşın</h2>
-    <form id="contactForm">
-      <div class="mb-3">
-        <label for="name" class="form-label">Adınız</label>
-        <input type="text" class="form-control" id="name" required />
-        <div id="nameError" class="error"></div>
+<div class="container contact-form">
+  <h2 class="text-center mb-4">Bize Ulaşın</h2>
+  <form>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label>Adınız</label>
+        <input type="text" class="form-control" required />
       </div>
-
-      <div class="mb-3">
-        <label for="email" class="form-label">E-posta</label>
-        <input type="email" class="form-control" id="email" required />
-        <div id="emailError" class="error"></div>
+      <div class="col-md-6">
+        <label>Soyadınız</label>
+        <input type="text" class="form-control" required />
       </div>
+    </div>
 
-      <div class="mb-3">
-        <label for="message" class="form-label">Mesajınız</label>
-        <textarea class="form-control" id="message" rows="4" required></textarea>
-        <div id="messageError" class="error"></div>
+    <div class="mb-3">
+      <label>Cinsiyetiniz</label><br />
+      <div class="form-check form-check-inline">
+        <input type="radio" name="gender" class="form-check-input" id="erkek" />
+        <label class="form-check-label" for="erkek">Erkek</label>
       </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" name="gender" class="form-check-input" id="kiz" />
+        <label class="form-check-label" for="kiz">Kız</label>
+      </div>
+    </div>
 
-      <button type="submit" class="btn btn-primary">Gönder</button>
-    </form>
-    <div id="resultMessage" class="mt-3"></div>
-  </div>
+    <div class="mb-3">
+      <label>Şehriniz</label>
+      <select class="form-select">
+        <option selected disabled>Şehir Seç</option>
+        <option>İstanbul</option>
+        <option>Ankara</option>
+        <option>Homs</option>
+      </select>
+    </div>
 
-  <script>
-    const form = document.getElementById("contactForm");
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label>Numaranız</label>
+        <input type="tel" class="form-control" placeholder="5xx xxx xx xx" />
+      </div>
+      <div class="col-md-6">
+        <label>E-mailiniz</label>
+        <input type="email" class="form-control" placeholder="kullanıcı@ornek.sakarya.tr" />
+      </div>
+    </div>
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+    <div class="mb-3">
+      <label>Hangi Üniversite Okuyorsunuz</label>
+      <input type="text" class="form-control" placeholder="Aramak için yazın..." />
+    </div>
 
-      let hasError = false;
+    <div class="mb-3">
+      <label>Kullandığınız Diller</label><br />
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="cpp" />
+        <label class="form-check-label text-danger" for="cpp">C++</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="python" />
+        <label class="form-check-label text-danger" for="python">Python</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="csharp" />
+        <label class="form-check-label text-danger" for="csharp">C#</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="js" />
+        <label class="form-check-label text-danger" for="js">JavaScript</label>
+      </div>
+    </div>
 
-      // inputları al
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
+    <div class="mb-3">
+      <label>Seçtiğiniz Diller Bir Cümle Özetleyiniz</label>
+      <input type="text" class="form-control" />
+    </div>
 
-      // hata kutuları
-      document.getElementById("nameError").textContent = "";
-      document.getElementById("emailError").textContent = "";
-      document.getElementById("messageError").textContent = "";
+    <div class="mb-3">
+      <label>Mesajınız</label>
+      <textarea class="form-control" rows="4"></textarea>
+    </div>
 
-      // validasyon
-      if (name === "") {
-        document.getElementById("nameError").textContent = "Lütfen adınızı girin.";
-        hasError = true;
-      }
+    <button type="submit" class="btn btn-primary">Gönder</button>
+    <button type="reset" class="btn btn-secondary ms-2">Temizle</button>
+  </form>
+</div>
 
-      if (email === "" || !email.includes("@")) {
-        document.getElementById("emailError").textContent = "Geçerli bir e-posta girin.";
-        hasError = true;
-      }
-
-      if (message.length < 10) {
-        document.getElementById("messageError").textContent = "Mesaj en az 10 karakter olmalı.";
-        hasError = true;
-      }
-
-      if (!hasError) {
-        document.getElementById("resultMessage").innerHTML =
-          "<div class='alert alert-success'>Mesajınız gönderildi!</div>";
-        form.reset();
-      }
-    });
-  </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
