@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(to right, #e8f0ff, #ffffff);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .profile-header {
@@ -41,4 +41,208 @@ footer {
   margin-top: 4rem;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+body {
+  background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
+}
+
+.contact-form {
+  max-width: 850px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: 500;
+}
+
+textarea.form-control,
+input.form-control,
+select.form-select {
+  border-radius: 10px;
+}
+
+.btn-primary {
+  border-radius: 10px;
+}
+
+.btn-secondary {
+  border-radius: 10px;
+}
+/*  Giriş (Login) */
+
+body {
+  background-color: #f2f2f2;
+}
+
+.login-box {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h3 {
+  font-weight: 600;
+}
+
+/*  Mirasımız - Halep Kalesi */
+
+body.miras-body {
+  background-color: #1e2a3a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.miras-container {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #121a24;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.miras-container img {
+  border-radius: 10px;
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+.miras-container h1,
+h2,
+h3 {
+  color: #1e90ff;
+}
+
+.miras-container .lead {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+blockquote {
+  background-color: #2a3c50;
+  border-left: 5px solid #1e90ff;
+  padding: 15px;
+  margin: 30px 0;
+  font-style: italic;
+}
+
+/* shehrim */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background-overlay {
+  background-image: url("img/syria-flag.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content-wrapper {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.section-title {
+  margin-top: 60px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0d6efd;
+}
+
+.city-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Kartlar hover efekti */
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Görseller boyut sabitleme */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Footer düzeltmesi */
+footer {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Kart yuvarlama */
+.card {
+  border-radius: 15px;
+}
+
+
+/* Genel arka plan ve yazı ayarları */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Hero bölümü */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+}
+
+.hero-content {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Kartlar */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+  background-color: #0d0d0d;
+  color: #ccc;
+}
+
+/* Düğmeler */
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+  border: none;
 }
