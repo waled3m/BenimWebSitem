@@ -1,7 +1,7 @@
 <!-- فقط أضف هذا قبل </body> مباشرة -->
 <script>
 document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault(); // منع الإرسال مؤقتًا للتحقق
+  e.preventDefault(); 
 
   const ad = document.querySelector('input[placeholder="Adınız"]');
   const soyad = document.querySelector('input[placeholder="Soyadınız"]');
@@ -25,7 +25,11 @@ document.querySelector("form").addEventListener("submit", function (e) {
     alert(errors.join("\n"));
   } else {
     alert("Form başarıyla gönderildi!");
-    this.submit(); // إرسال فعلي إن تم التحقق
+    this.submit(); 
   }
 });
 </script>
+
+
+
+
