@@ -1,169 +1,178 @@
 <!DOCTYPE html>
+
 <html lang="tr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mirasımız - Halep Kalesi</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      transition: background-color 0.5s, color 0.5s;
-    }
-
-    .navbar {
-      background-color: #0d6efd !important;
-    }
-
-    .navbar a {
-      color: white !important;
-    }
-
-    .miras-container {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    img {
-      border-radius: 10px;
-      max-width: 100%;
-      height: auto;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    h3 {
-      color: #0d6efd;
-      margin-top: 30px;
-    }
-
-    blockquote {
-      margin-top: 40px;
-      font-style: italic;
-      background-color: rgba(13, 110, 253, 0.1);
-      border-left: 5px solid #0d6efd;
-      padding: 15px 20px;
-      border-radius: 10px;
-    }
-
-    /* الوضع الليلي */
-    .dark-mode {
-      background-color: #121212;
-      color: white;
-    }
-
-    /* الوضع النهاري */
-    .light-mode {
-      background-color: white;
-      color: black;
-    }
-
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 9999;
-    }
-  </style>
-</head>
-<body class="light-mode">
-
-  <!-- زر الوضع -->
-  <button class="btn btn-outline-light theme-toggle" onclick="toggleTheme()">🌙</button>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mirasımız - Waled Amouri</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Benim Web Sitem</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand" href="index.html">HOME</a>
+      <button
+        class="navbar-toggler"
+        data-bs-target="#navbarNav"
+        data-bs-toggle="collapse"
+        type="button"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
-          <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Hakkımda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sehrim.html">Şehrim</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-          <li class="nav-item"><a class="nav-link active" href="mirasimiz.html">Mirasımız</a></li>
-          <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
-          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ilgi.html">İlgi Alanlarım</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Giriş</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <div class="miras-container">
-    <h1 class="text-center">Mirasımız: Halep Kalesi</h1>
-    <p class="lead text-center">Suriye'nin kalbinde yükselen tarihi bir yapı</p>
-
-    <img src="img/halep-kalesi.jpg" alt="Halep Kalesi" class="img-fluid d-block mx-auto" />
-
-    <section class="mt-4">
-      <h3>Hakkında</h3>
-      <p>
-        Halep Kalesi, Orta Doğu'nun en eski ve en büyük kalelerinden biridir.
-        Binlerce yıllık bir geçmişe sahip olup birçok medeniyete ev sahipliği yapmıştır.
-      </p>
-    </section>
-
-    <section class="mt-4">
-      <h3>Tarihçesi</h3>
-      <ul>
-        <li><strong>MÖ 3. yüzyıl:</strong> Kale ilk kez inşa edildi.</li>
-        <li><strong>İslam Dönemi:</strong> Emeviler ve Abbâsîler tarafından genişletildi.</li>
-        <li><strong>Haçlı Seferleri:</strong> Savaşlar sırasında savunma amaçlı kullanıldı.</li>
-        <li><strong>Günümüz:</strong> Restorasyonlarla ayakta tutulmakta ve turistik alan olarak hizmet vermektedir.</li>
-      </ul>
-    </section>
-
-    <section class="mt-4">
-      <h3>Mimari</h3>
-      <p>
-        Kale, yüksek bir tepe üzerine kurulmuştur. İçerisinde cami, saray, su sarnıçları ve askeri yapılar yer alır. Taş işçiliği oldukça etkileyicidir.
-      </p>
-    </section>
-
-    <section class="mt-4">
-      <h3>Kültürel Önemi</h3>
-      <p>
-        UNESCO Dünya Mirası geçici listesinde yer almakta olup Suriye'nin kültürel zenginliğini temsil eden önemli bir yapıdır.
-      </p>
-    </section>
-
-    <section class="mt-4">
-      <h3>Konum Planı</h3>
-      <img src="img/kale-harita.jpg" alt="Halep Kalesi Planı" />
-    </section>
-
-    <blockquote>
-      "Halep Kalesi, yeryüzünde gördüğüm en güçlü yapılardan biridir." – İbn Battuta
-    </blockquote>
+  <header class="text-center my-5">
+    <h1 class="text-primary">Suriye'den Tarihi Miraslar</h1>
+    <p class="lead">
+      Ülkemin en önemli kültürel ve tarihi miraslarından bazıları
+    </p>
+  </header>
+  <div class="container">
+    <div class="row g-4">
+      <!-- بطاقة 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img alt="Afamiye" class="card-img-top" src="img/afamaya.jpeg" />
+          <div class="card-body">
+            <h5 class="card-title">Efemiyye</h5>
+            <p class="card-text">
+              Asi Nehri kıyısında, Selevkoslar dönemine ait bir antik kent.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://tr.wikipedia.org/wiki/Epemiye,_Suriye"
+              target="_blank"
+              >Daha fazla detay</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- بطاقة 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img alt="Busra" class="card-img-top" src="img/busra.jpg" />
+          <div class="card-body">
+            <h5 class="card-title">Busra el-Şam</h5>
+            <p class="card-text">
+              Roma amfitiyatrosu ile bilinen, Ürdün sınırına yakın antik kent.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://tr.wikipedia.org/wiki/Busra"
+              target="_blank"
+              >Daha fazla detay</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- بطاقة 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img
+            alt="Kal'a"
+            class="card-img-top"
+            src="img/salaheldin kulesi.jpg"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Selahaddin Kalesi</h5>
+            <p class="card-text">
+              Lazkiye yakınlarında, Bizans ve Haçlı dönemine ait kale.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://tr.wikipedia.org/wiki/Selahaddin_Kalesi"
+              target="_blank"
+              >Daha fazla detay</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- بطاقة 4 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img alt="Şam" class="card-img-top" src="img/eski sham.jpg" />
+          <div class="card-body">
+            <h5 class="card-title">Eski Şam</h5>
+            <p class="card-text">
+              UNESCO listesinde, dünyanın en eski yerleşim yerlerinden biri.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://tr.wikipedia.org/wiki/Eski_%C5%9Eam"
+              target="_blank"
+              >Daha fazla detay</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- بطاقة 5 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img alt="Dura" class="card-img-top" src="img/mary ve dura.jpg" />
+          <div class="card-body">
+            <h5 class="card-title">Mari ve Dura-Europos</h5>
+            <p class="card-text">
+              Fırat kıyısında bulunan antik kentler, erken dönem uygarlık izleri
+              taşır.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://tr.wikipedia.org/wiki/Dura-Europos"
+              target="_blank"
+              >Daha fazla detay</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- بطاقة 6 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img
+            alt="Unutulan Şehirler"
+            class="card-img-top"
+            src="img/mensi sehirler.jpg"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Kaybolmuş Şehirler</h5>
+            <p class="card-text">
+              Kuzey Suriye'de terk edilmiş antik şehir kalıntıları.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://tr.wikipedia.org/wiki/%C3%96l%C3%BC_%C5%9Eehirler"
+              target="_blank"
+              >Daha fazla detay</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const savedTheme = localStorage.getItem("theme");
-    const body = document.body;
-    const btn = document.querySelector(".theme-toggle");
-
-    if (savedTheme) {
-      body.classList.remove("light-mode", "dark-mode");
-      body.classList.add(savedTheme);
-      btn.innerHTML = savedTheme === "dark-mode" ? "☀️" : "🌙";
-    }
-
-    function toggleTheme() {
-      if (body.classList.contains("light-mode")) {
-        body.classList.remove("light-mode");
-        body.classList.add("dark-mode");
-        localStorage.setItem("theme", "dark-mode");
-        btn.innerHTML = "☀️";
-      } else {
-        body.classList.remove("dark-mode");
-        body.classList.add("light-mode");
-        localStorage.setItem("theme", "light-mode");
-        btn.innerHTML = "🌙";
-      }
-    }
-  </script>
-</body>
 </html>

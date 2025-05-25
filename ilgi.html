@@ -1,119 +1,91 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NASA Fotoğrafı - Waled Amouri</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body class="light-mode">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İlgi Alanlarım</title>
 
-  <button class="btn btn-outline-light theme-toggle" onclick="toggleTheme()">🌙</button>
+    <!-- ✅ Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">HOME</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Hakkımda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sehrim.html">Şehrim</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cv.html">CV</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="ilgi.html">İlgi Alanlarım</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="iletisim.html">İletişim</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="giris.html">Giriş</a>
-          </li>
-        </ul>
+  <body>
+    <!-- ✅ NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">HOME</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Hakkımda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sehrim.html">Şehrim</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ilgi.html">İlgi Alanlarım</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="iletisim.html">İletişim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Giriş</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ✅ İçerik -->
+    <div class="container py-5">
+            <h3>DOĞUM TARIHINE GÖRE NASA FOTOĞRAFI</h3>
+    
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card shadow text-center">
+            <div class="card-header bg-primary text-white text-center">
+              <h3 class="mb-0">Doğum Tarihine Göre NASA Fotoğrafı</h3>
+            </div>
+            <div class="card-body">
+              <form id="search-form" class="mb-4">
+                <label for="bday" class="form-label">Doğum Tarihini Seç</label>
+                <input
+                  class="form-control bday-date"
+                  min="1995-06-15"
+                  type="date"
+                  id="bday"
+                  required
+                />
+              </form>
+              <div class="apod"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
-  
-  <div class="form-section container">
-    <h3 class="text-center mb-4">📷 Doğum Tarihine Göre NASA Fotoğrafı</h3>
-    <form id="search-form">
-      <label for="bday" class="form-label">Doğum Tarihini Seçin:</label>
-      <input class="form-control bday-date" min="1995-06-15" type="date" id="bday" />
-    </form>
 
-    <div class="apod mt-4"></div>
-  </div>
-
-  <script>
-    const input = document.querySelector("input.bday-date");
-    const API_KEY = "jeedZalahZm8ZxpF8fAdRE4w0GLLWovZVFUK3M2c";
-    const date = new Date().toLocaleDateString("en-ca");
-    input.max = date;
-
-    input.addEventListener("change", (event) => getAPOD(event.target.value));
-
-    const getAPOD = (date) => {
-      const url = `https://api.nasa.gov/planetary/apod?date=${date}&api_key=${API_KEY}`;
-      fetch(url)
-        .then((response) => {
-          if (response.ok) return response.json();
-          throw new Error("Bad server response");
-        })
-        .then((data) => displayAPOD(data))
-        .catch(() => displayNotFound());
-    };
-
-    const displayAPOD = (data) => {
-      const apodCard = document.querySelector(".apod");
-      apodCard.innerHTML = `
-        <h3 class="apod-title">${data.title}</h3>
-        <img src="${data.url}" alt="${data.title}" />
-      `;
-    };
-
-    const displayNotFound = () => {
-      const apodCard = document.querySelector(".apod");
-      apodCard.innerHTML = '<h4 class="text-danger">Bu doğum tarihine ait fotoğraf bulunamadı.</h4>';
-    };
-
-    const savedTheme = localStorage.getItem("theme");
-    const body = document.body;
-    const btn = document.querySelector(".theme-toggle");
-
-    if (savedTheme) {
-      body.classList.remove("light-mode", "dark-mode");
-      body.classList.add(savedTheme);
-      btn.innerHTML = savedTheme === "dark-mode" ? "☀️" : "🌙";
-    }
-
-    function toggleTheme() {
-      if (body.classList.contains("light-mode")) {
-        body.classList.remove("light-mode");
-        body.classList.add("dark-mode");
-        localStorage.setItem("theme", "dark-mode");
-        btn.innerHTML = "☀️";
-      } else {
-        body.classList.remove("dark-mode");
-        body.classList.add("light-mode");
-        localStorage.setItem("theme", "light-mode");
-        btn.innerHTML = "🌙";
-      }
-    }
-  </script>
-</body>
+    <!-- ✅ JS -->
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
