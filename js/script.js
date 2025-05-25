@@ -2,17 +2,13 @@
 // 📅 NASA APOD (Astronomy Picture of the Day)
 // ============================================
 
-// 👉 Elements
 const input = document.querySelector("input.bday-date");
 const apodCard = document.querySelector(".apod");
 
-// 👉 API Key
 const API_KEY = "jeedZalahZm8ZxpF8fAdRE4w0GLLWovZVFUK3M2c";
 
-// 👉 Set max date to today
 input.max = new Date().toLocaleDateString("en-ca");
 
-// 👉 Listen for input date change
 input.addEventListener("change", (event) => getAPOD(event.target.value));
 
 // ============================================

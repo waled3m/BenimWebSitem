@@ -163,12 +163,12 @@ a.text-white:hover {
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #0d6efd; /* أزرق */
+  background-color: #0d6efd;
   border-radius: 50%;
   background-size: 60% 60%;
   background-position: center;
   background-repeat: no-repeat;
-  filter: invert(1); /* يحول السهم للأبيض إذا كان أيقونة سوداء */
+  filter: invert(1);
   width: 50px;
   height: 50px;
 }
@@ -399,16 +399,14 @@ header {
   padding: 0;
 }
 
-
-
 /* navbar */
 .navbar a {
   color: white !important;
-  transition: all 0.3s ease; /* حركة سلسة */
+  transition: all 0.3s ease;
   position: relative;
 }
 
 .navbar a:hover {
-  color: #070706 !important; /* غيّر اللون عند اللمس */
-  transform: translateY(-3px); /* يرتفع للأعلى قليلاً */
+  color: #070706 !important;
+  transform: translateY(-3px);
 }
