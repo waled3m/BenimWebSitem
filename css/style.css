@@ -161,6 +161,17 @@ a.text-white:hover {
   object-fit: cover;
   border-radius: 10px;
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #0d6efd; /* أزرق */
+  border-radius: 50%;
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: invert(1); /* يحول السهم للأبيض إذا كان أيقونة سوداء */
+  width: 50px;
+  height: 50px;
+}
 
 /* Şehir bölümü */
 .city-section {
@@ -253,6 +264,7 @@ blockquote {
   right: 1rem;
   z-index: 9999;
 }
+
 /* =============================== 
    Mirasımız Sayfası - Tasarım 
 ================================== */
@@ -385,4 +397,18 @@ header {
 .navbar {
   margin-bottom: 0;
   padding: 0;
+}
+
+
+
+/* navbar */
+.navbar a {
+  color: white !important;
+  transition: all 0.3s ease; /* حركة سلسة */
+  position: relative;
+}
+
+.navbar a:hover {
+  color: #070706 !important; /* غيّر اللون عند اللمس */
+  transform: translateY(-3px); /* يرتفع للأعلى قليلاً */
 }

@@ -1,161 +1,125 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Şehrim - Waled Amouri</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="css/style.css" rel="stylesheet" />
-    <style>
-      /* ✅ تصغير الصور داخل السلايدر مع الحفاظ على الأبعاد */
-      #cityCarousel .carousel-item img {
-        max-height: 400px;
-        width: auto;
-        margin: auto;
-        object-fit: contain;
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">HOME</a>
-        <button
-          class="navbar-toggler"
-          data-bs-target="#navbarNav"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Hakkımda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sehrim.html">Şehrim</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ilgi.html">İlgi Alanlarım</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="iletisim.html">İletişim</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Giriş</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <header>
-      <h1>Suriye'nin Şehirleri</h1>
-      <p>Memleketimden bazı şehirleri ve güzelliklerini tanıtmak istiyorum.</p>
-    </header>
-
-    <!-- ✅ Slider -->
-    <div id="cityCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <a href="#damascus"
-            ><img src="img/damascus.jpg" class="d-block w-100" alt="Damascus"
-          /></a>
-        </div>
-        <div class="carousel-item">
-          <a href="#homs"
-            ><img src="img/homs.jpg" class="d-block w-100" alt="Homs"
-          /></a>
-        </div>
-        <div class="carousel-item">
-          <a href="#latakia"
-            ><img src="img/latakia.jpg" class="d-block w-100" alt="Latakia"
-          /></a>
-        </div>
-        <div class="carousel-item">
-          <a href="#tdmur"
-            ><img src="img/tdmur.jpg" class="d-block w-100" alt="Tdmur"
-          /></a>
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#cityCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Şehrim - Waled Amouri</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <style>
+    #cityCarousel .carousel-item img {
+      max-height: 400px;
+      width: auto;
+      margin: auto;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HOME</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" type="button">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#cityCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
+          <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+          <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- ✅ City Sections -->
-    <section class="city-section" id="damascus">
-      <img src="img/damascus.jpg" alt="Şam" />
-      <div class="city-text">
-        <h3>Şam (Damascus)</h3>
-        <p>
-          Şam, Suriye'nin başkenti ve en eski yerleşim yerlerinden biridir.
-          Emevi Camii gibi tarihi yapılarıyla ünlüdür.
-        </p>
+  <header>
+    <h1>Suriye'nin Şehirleri</h1>
+    <p style="color: rgb(243, 243, 243);">Bu sayfada kendi şehrimi ve Suriye'deki diğer şehirleri tanıtacağım</p>
+  </header>
+
+  <!-- 1. Homs -->
+  <section class="city-section" id="homs">
+    <img src="img/homs.jpg" alt="Homs" />
+    <div class="city-text">
+      <h3>Humus (Homs)</h3>
+      <p>
+        Humus, Suriye'nin tam ortasında yer alan tarihi ve kültürel açıdan önemli bir şehirdir.
+        Bu şehir, geleneksel mimarisi, misafirperver insanları ve meşhur saat kulesi ile tanınır.
+        <strong>Ben bu şehirde doğdum ve büyüdüm</strong>. Çocukluk anılarımın çoğu bu sokaklarda geçmiştir.
+        Humus, benim için sadece bir şehir değil; aynı zamanda bir kimlik, bir geçmiş ve bir aidiyet duygusudur.
+      </p>
+    </div>
+  </section>
+
+  <!-- 2. Diğer şehirler başlığı -->
+  <h2 class="text-center text-primary mt-5 mb-4">Diğer Suriye Şehirleri</h2>
+
+  <!-- 3. Slider -->
+  <div id="cityCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="#damascus"><img src="img/damascus.jpg" class="d-block w-100" alt="Damascus" /></a>
       </div>
-    </section>
-
-    <section class="city-section" id="homs">
-      <img src="img/homs.jpg" alt="Homs" />
-      <div class="city-text">
-        <h3>Humus (Homs)</h3>
-        <p>
-          Humus, Orta Suriye'de yer alır. Saat kulesi gibi sembol yapılarıyla
-          tanınır. Benim de doğduğum şehirdir.
-        </p>
+      <div class="carousel-item">
+        <a href="#latakia"><img src="img/latakia.jpg" class="d-block w-100" alt="Latakia" /></a>
       </div>
-    </section>
-
-    <section class="city-section" id="latakia">
-      <img src="img/latakia.jpg" alt="Lazkiye" />
-      <div class="city-text">
-        <h3>Lazkiye (Latakia)</h3>
-        <p>
-          Lazkiye, Suriye'nin Akdeniz kıyısındaki önemli şehirlerinden biridir.
-          Deniz, doğa ve tarihi güzellikleriyle tanınır.
-        </p>
+      <div class="carousel-item">
+        <a href="#Halep"><img src="img/halep.jpg" class="d-block w-100" alt="halep" /></a>
       </div>
-    </section>
-
-    <section class="city-section" id="tdmur">
-      <img src="img/tdmur.jpg" alt="Tdmur" />
-      <div class="city-text">
-        <h3>Tedmur (Palmyra)</h3>
-        <p>
-          Tarihi Palmyra antik kenti, çöl ortasında Roma mimarisini yansıtan
-          muhteşem bir yerleşim yeridir.
-        </p>
+      <div class="carousel-item">
+        <a href="#idlib"><img src="img/idlib.jpg" class="d-block w-100" alt="idlib" /></a>
       </div>
-    </section>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#cityCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#cityCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  <!-- 4. Other cities -->
+  <section class="city-section" id="damascus">
+    <img src="img/damascus.jpg" alt="Şam" />
+    <div class="city-text">
+      <h3>Şam (Damascus)</h3>
+      <p>  Şam, tarih boyunca birçok medeniyete ev sahipliği yapmış, zengin kültürel mirasa sahip bir başkenttir.
+        Labirenti andıran dar sokakları, geleneksel çarşıları ve eşsiz mimarisiyle dikkat çeker.
+      </p>
+    </div>
+  </section>
+  <section class="city-section" id="latakia">
+    <img src="img/latakia.jpg" alt="Lazkiye" />
+    <div class="city-text">
+      <h3>Lazkiye (Latakia)</h3>
+      <p>Lazkiye, Suriye'nin Akdeniz kıyısındaki önemli şehirlerinden biridir. Deniz, doğa ve tarihi güzellikleriyle tanınır.</p>
+    </div>
+  </section>
+  <section class="city-section" id="halep">
+    <img src="img/halep.jpg" alt="halep" />
+    <div class="city-text">
+      <h3>Halep(Aleppo)</h3>
+      Halep, Suriye'nin en eski ve en büyük şehirlerinden biridir. Tarihi İpek Yolu üzerinde bulunan bu şehir,
+      yüzyıllar boyunca önemli bir ticaret ve kültür merkezi olmuştur. Ünlü Halep Kalesi, tarihi çarşıları,
+      taş mimarisi ve geleneksel mutfağı ile tanınır. 
+      Zengin geçmişi ve stratejik konumu sayesinde, Halep her zaman Suriye'nin kalbinde yer almıştır.
+    </div>
+  </section>
+  <section class="city-section" id="idlip">
+    <img src="img/idlib.jpg" alt="Idlip" />
+    <div class="city-text">
+      <h3>İdlib (Idlib)</h3>
+      <p>  İdlib, doğal güzellikleri ve zeytinlikleriyle bilinen, Suriye'nin kuzeybatısında sakin bir şehirdir.
+        Çevresinde birçok tarihi köy kalıntısı yer alır.
+      </p>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

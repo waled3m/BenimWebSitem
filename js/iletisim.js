@@ -28,8 +28,8 @@ $(document).ready(function () {
   });
 
   // ✅ Form Gönderilince
-  $("#iletisimForm").submit(function (e) {
-    e.preventDefault(); // Gerçek gönderimi engelle
-    alert("Form başarıyla gönderildi!");
-  });
+  // $("#iletisimForm").submit(function (e) {
+  //   e.preventDefault(); // Gerçek gönderimi engelle
+  //   alert("Form başarıyla gönderildi!");
+  // });
 });
